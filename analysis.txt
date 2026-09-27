@@ -1,0 +1,30 @@
+MERGE SORT VS QUICK SORT
+
+Input weights: 20 15 20 10 15 20 25 10
+
+MERGE SORT
+Best case: O(n log n)
+Average case: O(n log n)
+Worst case: O(n log n)
+Space complexity: O(n)
+Comparisons for this input: 16
+
+The program is stable because it uses <= while merging. When two weights are equal,
+the package from the left subarray is selected first. Thus P2 stays before P5, and
+P1 stays before P3 and P6.
+
+QUICK SORT
+Best case: O(n log n)
+Average case: O(n log n)
+Worst case: O(n^2)
+Space complexity: O(log n) on average; O(n) in the worst case
+Comparisons for this input: 16
+
+The program uses the last element as a Lomuto pivot and is not stable. The sorted
+result changes P2, P5 into P5, P2, and P1, P3, P6 into P3, P6, P1.
+
+CONCLUSION
+Both programs correctly sort the package weights. Merge Sort needs additional
+temporary-array space but preserves the order of equal weights. Quick Sort can use
+less extra space on average, but this implementation does not preserve equal items'
+original order.

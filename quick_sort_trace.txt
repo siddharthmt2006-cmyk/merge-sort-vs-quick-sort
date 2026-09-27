@@ -1,0 +1,28 @@
+QUICK SORT TRACE
+
+Initial order:
+P1(20) P2(15) P3(20) P4(10) P5(15) P6(20) P7(25) P8(10)
+
+The program uses Lomuto partitioning with the last element as the pivot.
+
+1. Subarray: P1(20) P2(15) P3(20) P4(10) P5(15) P6(20) P7(25) P8(10)
+   Pivot: P8(10)
+   After partition: P4(10) P8(10) P3(20) P1(20) P5(15) P6(20) P7(25) P2(15)
+
+2. Subarray: P3(20) P1(20) P5(15) P6(20) P7(25) P2(15)
+   Pivot: P2(15)
+   After partition: P5(15) P2(15) P3(20) P6(20) P7(25) P1(20)
+
+3. Subarray: P3(20) P6(20) P7(25) P1(20)
+   Pivot: P1(20)
+   After partition: P3(20) P6(20) P1(20) P7(25)
+
+4. Subarray: P3(20) P6(20)
+   Pivot: P6(20)
+   After partition: P3(20) P6(20)
+
+Final sorted order:
+P4(10) P8(10) P5(15) P2(15) P3(20) P6(20) P1(20) P7(25)
+
+Comparisons counted by the program: 16
+Equal-weight packages changed relative order, so this implementation is not stable.

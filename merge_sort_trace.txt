@@ -1,0 +1,26 @@
+MERGE SORT TRACE
+
+Initial order:
+P1(20) P2(15) P3(20) P4(10) P5(15) P6(20) P7(25) P8(10)
+
+Splitting:
+P1(20) P2(15) P3(20) P4(10) | P5(15) P6(20) P7(25) P8(10)
+P1(20) P2(15) | P3(20) P4(10) | P5(15) P6(20) | P7(25) P8(10)
+P1(20) | P2(15) | P3(20) | P4(10) | P5(15) | P6(20) | P7(25) | P8(10)
+
+Merging:
+1. P1(20) + P2(15) = P2(15) P1(20)
+2. P3(20) + P4(10) = P4(10) P3(20)
+3. P2(15) P1(20) + P4(10) P3(20) = P4(10) P2(15) P1(20) P3(20)
+4. P5(15) + P6(20) = P5(15) P6(20)
+5. P7(25) + P8(10) = P8(10) P7(25)
+6. P5(15) P6(20) + P8(10) P7(25) = P8(10) P5(15) P6(20) P7(25)
+7. P4(10) P2(15) P1(20) P3(20) + P8(10) P5(15) P6(20) P7(25)
+   = P4(10) P8(10) P2(15) P5(15) P1(20) P3(20) P6(20) P7(25)
+
+Final sorted order:
+P4(10) P8(10) P2(15) P5(15) P1(20) P3(20) P6(20) P7(25)
+
+Comparisons counted by the program: 16
+The <= comparison in merge keeps equal-weight packages from the left subarray first,
+so this implementation is stable.
